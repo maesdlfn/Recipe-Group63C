@@ -1,4 +1,6 @@
-#Delfin, Cherrie Mae S.
+#Delfin, Cherrie Mae S. - Search
+#Mariano, Juliannae Cyril S. - Edit and Delete
+#Padilla, Mark Jay B. - Search
 
 #ADD RECIPE
 
