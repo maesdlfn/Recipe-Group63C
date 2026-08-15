@@ -116,4 +116,4 @@ while True:
         print("Invalid choice.")
 
     if choice != "6":
-        input("\nPress 0 to go back to main page...")
+        input("\nPress 0 to go back to main page....")
