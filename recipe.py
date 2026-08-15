@@ -61,4 +61,5 @@ def search_recipe():
 
 add_recipe()
 edit_recipe()
+search_recipe()
 delete_recipe()
