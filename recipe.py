@@ -25,29 +25,28 @@ def add_recipe():
 
 #Edit-Recipe
 def edit_recipe():
-    name = input("Enter recipe name to edit: ")
+    name = input ("enter recipe name to edit: ")
 
     for recipe in recipes:
-        if recipe["name"].lower() == name.lower():
-            recipe["ingredients"] = input("Enter New Ingredient: ")
-            recipe["instructions"] = input("Enter New Instruction: ")
-            print("Recipe Updated Successfully!")
-            return
+        if recipe ["name"].lower()==name.lower():
+            new_ingredients = input ("Enter New Ingredient:")
+            new_instructions = input ("Enter New Instruction:")
 
-    print("Recipe not found.")
+            recipe["ingredients"] += "," + new_ingredients
+            recipe["instructions"] += "," + new_instructions
+            print ("Recipe Updated Succesfully!")
+        return
 
 
 #Delete-Recipe
 def delete_recipe():
-    name = input("Enter recipe name to delete: ")
+    name = input ("enter recipe name to delete: ")
 
     for recipe in recipes:
-        if recipe["name"].lower() == name.lower():
+        if recipe ["name"].lower()==name.lower():
             recipes.remove(recipe)
-            print("Recipe Deleted Successfully!")
-            return
-
-    print("Recipe not found.")
+            print ("Recipe Deleted Succesfully!")
+        return
 
 
 #SEARCH RECIPE
