@@ -35,7 +35,7 @@ def edit_recipe():
             recipe["ingredients"] += "," + new_ingredients
             recipe["instructions"] += "," + new_instructions
             print ("Recipe Updated Succesfully!")
-        return
+            return
 
 
 #Delete-Recipe
