@@ -6,8 +6,11 @@ def edit_recipe():
 
     for recipe in recipes:
         if recipe ["name"].lower()==name.lower():
-            recipe["ingredients"] = input ("Enter New Ingredient: ")
-            recipe["instructions"] = input ("Enter New Instrcution: ")
+            new_ingredients = input ("Enter New Ingredient: ")
+            new_instructions = input ("Enter New Instrcution: ")
+
+            recipe["ingredients"] += "," + new_ingredients
+            recipe["instructions"] += "," + new_instructions
             print ("Recipe Updated Succesfully!")
         return
 
