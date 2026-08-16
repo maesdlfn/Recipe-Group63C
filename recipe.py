@@ -46,7 +46,7 @@ def delete_recipe():
         if recipe ["name"].lower()==name.lower():
             recipes.remove(recipe)
             print ("Recipe Deleted Succesfully!")
-        return
+            return
 
 
 #SEARCH RECIPE
