@@ -1,6 +1,6 @@
 #Delfin, Cherrie Mae S. - Search
 #Mariano, Julianne Cyril S. - Edit and Delete
-#Padilla, Mark Jay B. - Search
+#Padilla, Mark Jay B. - Add
 
 #ADD RECIPE
 
@@ -51,17 +51,20 @@ def delete_recipe():
 
 #SEARCH RECIPE
 def search_recipe():
-    name=input("Enter Food name:")
+    name = input("Enter Food name: ")
+    found = False
 
     for recipe in recipes:
         if name.lower() in recipe["name"].lower():
             print("Recipe Found!")
-            print("Name:",recipe["name"])
-            print("Ingredients:",recipe["ingredients"])
-            print("Instructions:",recipe["instructions"])
-            return
+            print("Name:", recipe["name"])
+            print("Ingredients:", recipe["ingredients"])
+            print("Instructions:", recipe["instructions"])
+            print("------------------------")
+            found = True
 
-    print("Recipe not found.")
+    if not found:
+        print("Recipe not found.")
 
 
 #VIEW ALL FOODS
