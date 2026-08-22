@@ -1,15 +1,15 @@
 #Delfin, Cherrie Mae S. - Search
 #Mariano, Julianne Cyril S. - Edit and Delete
-#Padilla, Mark Jay B. - Add
+#Padilla, Mark Jay B. - Search
+
 
 #ADD RECIPE
-
-recipes =[]
+recipes = []
 
 def add_recipe():
-    name=input("Enter recipe name:")
-    ingredients=input("Enter Ingredients:")
-    instructions=input("Enter Instructions:")
+    name = input("Enter recipe name:")
+    ingredients = input("Enter Ingredients:")
+    instructions = input("Enter Instructions:")
 
     recipe = {
         "name": name,
@@ -25,34 +25,33 @@ def add_recipe():
 
 #Edit-Recipe
 def edit_recipe():
-    name = input ("enter recipe name to edit: ")
+    name = input("enter recipe name to edit: ")
 
     for recipe in recipes:
-        if recipe ["name"].lower()==name.lower():
-            new_ingredients = input ("Enter New Ingredient:")
-            new_instructions = input ("Enter New Instruction:")
+        if recipe["name"].lower() == name.lower():
+            new_ingredients = input("Enter New Ingredient:")
+            new_instructions = input("Enter New Instruction:")
 
             recipe["ingredients"] += "," + new_ingredients
             recipe["instructions"] += "," + new_instructions
-            print ("Recipe Updated Succesfully!")
+            print("Recipe Updated Succesfully!")
             return
 
 
 #Delete-Recipe
 def delete_recipe():
-    name = input ("enter recipe name to delete: ")
+    name = input("enter recipe name to delete: ")
 
     for recipe in recipes:
-        if recipe ["name"].lower()==name.lower():
+        if recipe["name"].lower() == name.lower():
             recipes.remove(recipe)
-            print ("Recipe Deleted Succesfully!")
+            print("Recipe Deleted Succesfully!")
             return
 
 
 #SEARCH RECIPE
 def search_recipe():
-    name = input("Enter Food name: ")
-    found = False
+    name = input("Enter Food name:")
 
     for recipe in recipes:
         if name.lower() in recipe["name"].lower():
@@ -60,11 +59,9 @@ def search_recipe():
             print("Name:", recipe["name"])
             print("Ingredients:", recipe["ingredients"])
             print("Instructions:", recipe["instructions"])
-            print("------------------------")
-            found = True
+            return
 
-    if not found:
-        print("Recipe not found.")
+    print("Recipe not found.")
 
 
 #VIEW ALL FOODS
